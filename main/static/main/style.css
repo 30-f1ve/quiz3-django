@@ -1,0 +1,130 @@
+/* Quiz 3 - Django MVT Demo styling */
+
+:root {
+    --primary: #0c4a6e;
+    --accent: #0ea5e9;
+    --bg: #f1f5f9;
+    --card-bg: #ffffff;
+    --text: #1e293b;
+    --muted: #64748b;
+    --border: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.site-header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #fff;
+    padding: 40px 0 32px;
+}
+
+.site-header h1 {
+    margin: 0 0 6px;
+    font-size: 2rem;
+}
+
+.site-header .subtitle {
+    margin: 0;
+    font-weight: 500;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+}
+
+main.container {
+    padding-top: 32px;
+    padding-bottom: 48px;
+}
+
+.intro-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.intro-card code {
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-size: 0.9em;
+}
+
+.count-badge {
+    display: inline-block;
+    margin: 12px 0 0;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.count-badge span {
+    background: #e0f2fe;
+    padding: 2px 10px;
+    border-radius: 999px;
+}
+
+.table-wrap {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: var(--primary);
+    color: #fff;
+}
+
+th, td {
+    text-align: left;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+}
+
+tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+tbody tr:hover {
+    background: #e0f2fe;
+}
+
+.empty-state {
+    background: var(--card-bg);
+    border: 1px dashed var(--border);
+    border-radius: 10px;
+    padding: 32px;
+    text-align: center;
+    color: var(--muted);
+}
+
+.site-footer {
+    text-align: center;
+    padding: 20px 0 32px;
+    color: var(--muted);
+    font-size: 0.85rem;
+}

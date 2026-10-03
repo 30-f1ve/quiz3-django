@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 3 - Django Student List</title>
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+</head>
+<body>
+
+    <main class="container">
+
+        <p class="count-badge">
+            Total students: <span>{{ student_count }}</span>
+        </p>
+
+        {% if students %}
+        <section class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Course</th>
+                        <th>Year Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for student in students %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ student.full_name }}</td>
+                        <td>{{ student.email }}</td>
+                        <td>{{ student.course }}</td>
+                        <td>{{ student.year_level }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+        {% else %}
+        <section class="empty-state">
+            <p>No student records yet. Add some through the Django admin
+               (<code>/admin/</code>) or the shell.</p>
+        </section>
+        {% endif %}
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Quiz #3 &middot; quiz3_django &middot; Built with Django</p>
+        </div>
+    </footer>
+
+</body>
+</html>
